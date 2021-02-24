@@ -6,7 +6,8 @@
     "scripts": {
         "build": "webpack",
         "dev": "webpack serve --mode=development",
-        "lint": "standard",
+        "lint": "eslint",
+        "format": "eslint . --ext .js --fix",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Irungaray",
@@ -16,6 +17,8 @@
         "@babel/preset-env": "^7.12.13",
         "@babel/preset-react": "^7.12.13",
         "babel-loader": "^8.2.2",
+        "eslint": "^7.20.0",
+        "eslint-plugin-react": "^7.22.0",
         "html-webpack-plugin": "^5.0.0",
         "standard": "^16.0.3",
         "webpack": "^5.21.2",
