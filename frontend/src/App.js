@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Logo } from './Components/Logo'
 import { ListOfCategories } from './Components/ListOfCategories';
 import { ListOfPhotoCards } from './Components/ListOfPhotoCards';
 
@@ -9,6 +10,7 @@ const App = () => {
 	return (
 		<>
 			<GlobalStyles />
+			<Logo />
 			<ListOfCategories />
 			<ListOfPhotoCards />
 		</>
