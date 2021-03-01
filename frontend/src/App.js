@@ -4,7 +4,7 @@ import { Logo } from './Components/Logo'
 import { ListOfCategories } from './Components/ListOfCategories';
 import { ListOfPhotoCards } from './Components/ListOfPhotoCards';
 
-import { GlobalStyles } from './GlobalStyles';
+import { GlobalStyles } from './styles/GlobalStyles';
 
 const App = () => {
 	return (
