@@ -29,7 +29,7 @@ const renderProp =
 
 export const PhotoCardWithQuery = ({ id }) => {
   return (
-    <Query query={query} variables={{ id }}>
+    <Query query={GET_SINGLE_PHOTO} variables={{ id }}>
       {
         renderProp
       }

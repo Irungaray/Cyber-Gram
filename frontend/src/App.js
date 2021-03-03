@@ -1,11 +1,11 @@
 import React from 'react';
+import { Router } from '@reach/router'
 
 import { Logo } from './Components/Logo'
-import { ListOfCategories } from './Components/ListOfCategories';
 
-import { ListOfPhotoCards } from './containers/ListOfPhotoCards';
 import { PhotoCardWithQuery } from './containers/PhotoCardWithQuery';
 
+import { Home } from './pages/Home';
 
 import { GlobalStyles } from './styles/GlobalStyles';
 
@@ -22,10 +22,10 @@ const App = () => {
 			{
 				detailId
 					? <PhotoCardWithQuery id={detailId} />
-					: <>
-						<ListOfCategories />
-						<ListOfPhotoCards categoryId={1} />
-					</>
+					: <Router>
+							<Home path='/'/>
+							<Home path='/pet/:id'/>
+						</Router>
 			}
 		</>
 	);
