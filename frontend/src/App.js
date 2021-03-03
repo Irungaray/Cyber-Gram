@@ -1,7 +1,8 @@
 import React from 'react';
-import { Router } from '@reach/router'
+import { Router } from '@reach/router';
 
-import { Logo } from './Components/Logo'
+import { Logo } from './Components/Logo';
+import { Navbar } from './Components/Navbar';
 
 import { Home } from './pages/Home';
 import { Detail } from './pages/Detail';
@@ -25,6 +26,8 @@ const App = () => {
 				<Home path='/pet/:id' />
 				<Detail path='/detail/:detailId' />
 			</Router>
+
+			<Navbar />
 		</>
 	);
 };

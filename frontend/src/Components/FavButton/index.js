@@ -9,7 +9,7 @@ export const FavButton = ({ liked, likes, onClick }) => {
 
   return (
     <Button onClick={onClick}>
-      <Icon size='32px' /> {likes} likes
+      <Icon size='24px' /> {likes} likes
     </Button>
   )
 }
