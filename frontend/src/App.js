@@ -3,9 +3,8 @@ import { Router } from '@reach/router'
 
 import { Logo } from './Components/Logo'
 
-import { PhotoCardWithQuery } from './containers/PhotoCardWithQuery';
-
 import { Home } from './pages/Home';
+import { Detail } from './pages/Detail';
 
 import { GlobalStyles } from './styles/GlobalStyles';
 
@@ -18,15 +17,14 @@ const App = () => {
 	return (
 		<>
 			<GlobalStyles />
+
 			<Logo />
-			{
-				detailId
-					? <PhotoCardWithQuery id={detailId} />
-					: <Router>
-							<Home path='/'/>
-							<Home path='/pet/:id'/>
-						</Router>
-			}
+
+			<Router>
+				<Home path='/' />
+				<Home path='/pet/:id' />
+				<Detail path='/detail/:detailId' />
+			</Router>
 		</>
 	);
 };
