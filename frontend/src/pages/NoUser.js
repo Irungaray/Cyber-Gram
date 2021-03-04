@@ -20,8 +20,12 @@ export const NoUser = () => {
 										const onSubmit = ({ email, password }) => {
 											const input = { email, password };
 											const variables = { input }
+
 											register({ variables })
-												.then(activateAuth)
+												.then(({ data }) => {
+													const { signup } = data;
+													activateAuth(signup);
+												})
 										}
 
 										const errMsg = error && 'User already exists or there is a problem.';
@@ -44,8 +48,12 @@ export const NoUser = () => {
 										const onSubmit = ({ email, password }) => {
 											const input = { email, password };
 											const variables = { input }
+
 											login({ variables })
-												.then(activateAuth)
+												.then(({ data }) => {
+													const {login} = data;
+													activateAuth(login);
+												})
 										}
 
 										const errMsg = error && 'Wrong password or user not found.';
