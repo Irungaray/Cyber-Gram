@@ -8,13 +8,13 @@ export const UserForm = ({ error, disabled, onSubmit, title }) => {
 	const email = useInputValue('');
 	const password = useInputValue('');
 
-  const handleSubmit = (e)  => {
-    e.preventDefault()
-    onSubmit({
-      email: email.value,
-      password: password.value
-    })
-  }
+	const handleSubmit = (e)  => {
+		e.preventDefault();
+		onSubmit({
+			email: email.value,
+			password: password.value
+		});
+	};
 
 	return (
 		<>
@@ -22,14 +22,14 @@ export const UserForm = ({ error, disabled, onSubmit, title }) => {
 
 			<Form disabled={disabled} onSubmit={handleSubmit}>
 				<Input
-          disabled={disabled}
+					disabled={disabled}
 					placeholder='Email/Username'
 					value={email.value}
 					onChange={email.onChange}
 				/>
 
 				<Input
-          disabled={disabled}
+					disabled={disabled}
 					placeholder='Password'
 					type='password'
 					value={password.value}
@@ -38,10 +38,10 @@ export const UserForm = ({ error, disabled, onSubmit, title }) => {
 
 				<Button disabled={disabled}>
           Go!
-        </Button>
+				</Button>
 			</Form>
 
-      {error && <span>{error}</span>}
+			{error && <span>{error}</span>}
 		</>
 	);
 };

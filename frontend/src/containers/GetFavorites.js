@@ -17,18 +17,18 @@ const GET_FAVS = gql`
 `;
 
 const renderProp = ({ loading, error, data }) => {
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error!</p>;
+	if (loading) return <p>Loading...</p>;
+	if (error) return <p>Error!</p>;
 
-  const { favs } = data;
+	const { favs } = data;
 
-  return <ListOfFavs favs={favs} />
-}
+	return <ListOfFavs favs={favs} />;
+};
 
 export const FavsWithQuery = () => {
-  return (
-    <Query query={GET_FAVS} fetchPolicy='network-only'>
-      {renderProp}
-    </Query>
-  )
-}
+	return (
+		<Query query={GET_FAVS} fetchPolicy='network-only'>
+			{renderProp}
+		</Query>
+	);
+};

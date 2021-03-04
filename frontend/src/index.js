@@ -16,13 +16,13 @@ const client = new ApolloCLient({
 			headers: {
 				authorization
 			}
-		})
+		});
 	},
 	onError: error => {
 		const { networkError } = error;
 
 		if (networkError && networkError.result.code === 'invalid_token') {
-			window.sessionStorage.removeItem('token')
+			window.sessionStorage.removeItem('token');
 		}
 	}
 });

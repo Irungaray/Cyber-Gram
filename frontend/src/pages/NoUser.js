@@ -19,14 +19,14 @@ export const NoUser = () => {
 									(register, { data, loading, error }) => {
 										const onSubmit = ({ email, password }) => {
 											const input = { email, password };
-											const variables = { input }
+											const variables = { input };
 
 											register({ variables })
 												.then(({ data }) => {
 													const { signup } = data;
 													activateAuth(signup);
-												})
-										}
+												});
+										};
 
 										const errMsg = error && 'User already exists or there is a problem.';
 
@@ -37,7 +37,7 @@ export const NoUser = () => {
 												error={errMsg}
 												disabled={loading}
 											/>
-										)
+										);
 									}
 								}
 							</RegisterMutation>
@@ -47,14 +47,14 @@ export const NoUser = () => {
 									(login, { data, loading, error }) => {
 										const onSubmit = ({ email, password }) => {
 											const input = { email, password };
-											const variables = { input }
+											const variables = { input };
 
 											login({ variables })
 												.then(({ data }) => {
 													const {login} = data;
 													activateAuth(login);
-												})
-										}
+												});
+										};
 
 										const errMsg = error && 'Wrong password or user not found.';
 
@@ -65,7 +65,7 @@ export const NoUser = () => {
 												error={errMsg}
 												disabled={loading}
 											/>
-										)
+										);
 									}
 								}
 							</LoginMutation>

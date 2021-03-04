@@ -4,14 +4,19 @@ const Context = createContext();
 
 const Provider = ({ children }) => {
 	const [isAuth, setAuth] = useState(() => {
-		return window.sessionStorage.getItem('token')
+		return window.sessionStorage.getItem('token');
 	});
 
 	const value = {
 		isAuth,
 		activateAuth: token => {
 			setAuth(true);
-			window.sessionStorage.setItem('token', token)
+			window.sessionStorage.setItem('token', token);
+		},
+
+		removeAuth: () => {
+			setAuth(false);
+			window.sessionStorage.removeItem('token');
 		}
 	};
 

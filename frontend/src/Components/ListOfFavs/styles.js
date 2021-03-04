@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Link as LinkRouter } from '@reach/router'
+import styled from 'styled-components';
+import { Link as LinkRouter } from '@reach/router';
 
 export const Link = styled(LinkRouter)`
     border-radius: 8px;
@@ -14,15 +14,15 @@ export const Link = styled(LinkRouter)`
         display: block;
         padding-bottom: 100%;
     }
-`
+`;
 
 export const Grid = styled.div`
     padding-top: 32px;
-`
+`;
 
 export const Image = styled.img`
     object-fit: cover;
     height: 100%;
     width: 100%;
     position: absolute;
-`
+`;
