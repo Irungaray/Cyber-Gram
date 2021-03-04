@@ -1,6 +1,8 @@
 import React from 'react';
 import { Router } from '@reach/router';
 
+import Context from './Context';
+
 import { Logo } from './Components/Logo';
 import { Navbar } from './Components/Navbar';
 
@@ -11,10 +13,6 @@ import { User } from './pages/User';
 import { NoUser } from './pages/NoUser';
 
 import { GlobalStyles } from './styles/GlobalStyles';
-
-const UserLogged = ({ children }) => {
-	return children({ isAuth: false });
-};
 
 const App = () => {
 	const urlParams = new window.URLSearchParams(window.location.search);
@@ -35,7 +33,7 @@ const App = () => {
 				<Detail path='/detail/:detailId' />
 			</Router>
 
-			<UserLogged>
+			<Context.Consumer>
 				{
 					({ isAuth }) =>
 						isAuth
@@ -48,7 +46,7 @@ const App = () => {
 								<NoUser path='/user' />
 							</Router>
 				}
-			</UserLogged>
+			</Context.Consumer>
 
 			<Navbar />
 		</>
