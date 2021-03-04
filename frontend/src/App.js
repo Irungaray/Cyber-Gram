@@ -13,8 +13,8 @@ import { NoUser } from './pages/NoUser';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 const UserLogged = ({ children }) => {
-	return children({ isAuth: false })
-}
+	return children({ isAuth: false });
+};
 
 const App = () => {
 	const urlParams = new window.URLSearchParams(window.location.search);
@@ -36,19 +36,19 @@ const App = () => {
 			</Router>
 
 			<UserLogged>
-					{
-						({ isAuth }) =>
-							isAuth
-								? <Router>
-										<Favs path='/favs' />
-										<User path='/user' />
-									</Router>
-								: <Router>
-										<NoUser path='/favs' />
-										<NoUser path='/user' />
-									</Router>
-					}
-				</UserLogged>
+				{
+					({ isAuth }) =>
+						isAuth
+							? <Router>
+								<Favs path='/favs' />
+								<User path='/user' />
+							</Router>
+							: <Router>
+								<NoUser path='/favs' />
+								<NoUser path='/user' />
+							</Router>
+				}
+			</UserLogged>
 
 			<Navbar />
 		</>

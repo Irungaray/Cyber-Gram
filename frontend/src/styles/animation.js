@@ -10,7 +10,7 @@ export const fadeInKeyFrames = keyframes`
     filter: blur(0);
     opacity: 1;
   }
-`
+`;
 
 export const fadeIn = ({ time = '1s', type = 'ease' } = {}) =>
-  css`animation: ${time} ${fadeInKeyFrames} ${type};`
+	css`animation: ${time} ${fadeInKeyFrames} ${type};`;

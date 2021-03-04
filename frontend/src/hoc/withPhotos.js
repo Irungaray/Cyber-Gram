@@ -12,6 +12,6 @@ const GET_PHOTOS = gql`
       liked
     }
   }
-`
+`;
 
-export const withPhotos = graphql(GET_PHOTOS)
+export const withPhotos = graphql(GET_PHOTOS);

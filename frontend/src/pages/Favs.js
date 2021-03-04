@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export const Favs = () => {
-  return (
-    <div>
+	return (
+		<div>
       favs
-    </div>
-  )
-}
+		</div>
+	);
+};

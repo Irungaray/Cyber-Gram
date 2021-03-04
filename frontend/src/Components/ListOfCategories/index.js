@@ -9,24 +9,24 @@ function useCategoriesData() {
 	const [ loading, setLoading ] = useState(false);
 
 	useEffect(function () {
-		setLoading(true)
+		setLoading(true);
 		window.fetch('https://petgram-server-24iykciv5.now.sh/categories')
 			.then(res => res.json())
 			.then(response => {
-				setCategories(response)
-				setLoading(false)
-			})
-	}, [])
+				setCategories(response);
+				setLoading(false);
+			});
+	}, []);
 
 	return { categories, loading };
 }
 
 export const ListOfCategories = () => {
 
-	const { categories, loading } = useCategoriesData()
+	const { categories, loading } = useCategoriesData();
 
 	if (loading) {
-		return 'Loading...'
+		return 'Loading...';
 	}
 
 	return (

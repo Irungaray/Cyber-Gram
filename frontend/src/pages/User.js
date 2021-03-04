@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export const User = () => {
-  return (
-    <div>
+	return (
+		<div>
       User
-    </div>
-  )
-}
+		</div>
+	);
+};

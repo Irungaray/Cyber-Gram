@@ -5,10 +5,10 @@ import { ListOfCategories } from '../Components/ListOfCategories';
 import { ListOfPhotoCards } from '../containers/ListOfPhotoCards';
 
 export const Home = ({ id }) => {
-  return (
-    <>
-      <ListOfCategories />
-      <ListOfPhotoCards categoryId={id} />
-    </>
-  )
-}
+	return (
+		<>
+			<ListOfCategories />
+			<ListOfPhotoCards categoryId={id} />
+		</>
+	);
+};
