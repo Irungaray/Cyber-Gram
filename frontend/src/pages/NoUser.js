@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Context from '../Context';
 
@@ -14,6 +15,12 @@ export const NoUser = () => {
 				({ activateAuth }) => {
 					return (
 						<>
+
+							<Helmet>
+								<title>Pets! - Login </title>
+								<meta name='description' content='Pet photos' />
+							</Helmet>
+
 							<RegisterMutation>
 								{
 									(register, { data, loading, error }) => {
@@ -51,7 +58,7 @@ export const NoUser = () => {
 
 											login({ variables })
 												.then(({ data }) => {
-													const {login} = data;
+													const { login } = data;
 													activateAuth(login);
 												});
 										};

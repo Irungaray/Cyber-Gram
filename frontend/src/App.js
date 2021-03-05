@@ -11,6 +11,8 @@ import { Detail } from './pages/Detail';
 import { Favs } from './pages/Favs';
 import { User } from './pages/User';
 import { NoUser } from './pages/NoUser';
+import { NotFound } from './pages/NotFound';
+
 
 import { GlobalStyles } from './styles/GlobalStyles';
 
@@ -44,6 +46,8 @@ const App = () => {
 							: <Router>
 								<NoUser path='/favs' />
 								<NoUser path='/user' />
+
+								{/* <NotFound default /> */}
 							</Router>
 				}
 			</Context.Consumer>
