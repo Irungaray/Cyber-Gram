@@ -8,5 +8,24 @@
 </head>
 <body>
   <div id="root"></div>
+
+  <noscript>
+    <h3>THIS APP NEEDS JAVASCRIPT, YOU PRIVACY-CONCERNED CHAD!</h3>
+    <h2>Don't worry, you can see the code on <a href="https://github.com/Irungaray/Pets">GitHub</a>.</h2>
+  </noscript>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('SW Registered')
+          })
+          .catch(registrationError => {
+            console.log('SW Error: ', registrationError)
+          })
+      })
+    }
+  </script>
 </body>
 </html>
