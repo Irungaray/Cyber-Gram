@@ -1,0 +1,6 @@
+{
+  "baseUrl": "",
+  "chromeWebSecurity": false,
+  "viewportWidth": 500,
+  "viewportHeight": 300
+}
